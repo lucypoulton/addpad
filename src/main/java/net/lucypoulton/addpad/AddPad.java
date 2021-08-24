@@ -32,9 +32,9 @@ public class AddPad extends PlaceholderExpansion {
 		}
 		placeholder.setLength(placeholder.length() - 1);
 
-		String placeholderVal = PlaceholderAPI.setPlaceholders(player, placeholder.toString());
+		String placeholderVal = PlaceholderAPI.setPlaceholders(player, "%" + placeholder + "%");
 
-		switch (paramsSplit[1]) {
+		switch (paramsSplit[0]) {
 			case "before":
 				return " " + placeholderVal;
 			case "after":
